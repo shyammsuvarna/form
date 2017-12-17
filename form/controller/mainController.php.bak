@@ -1,0 +1,32 @@
+<?php
+
+if($gs_id !=="")
+$gs_id=isset($_REQUEST['id'])?$_REQUEST['id']:'';
+
+$gs_id=isset($_REQUEST['submit'])?$_REQUEST['submit']:$gs_id;
+
+
+switch($gs_id){
+case "login":
+	//echo $gs_id;
+	include '../model/validate_user.php'; 
+	$ls_info = validateInfo();
+	echo $ls_info;
+	break;
+
+case "submit";
+	include '../model/saveinfo.php'; 
+	$ls_info = saveInfo();
+	echo $ls_info;
+	break;
+}
+?>
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

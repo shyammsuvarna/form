@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--  <script src="/form/view/js/myjs.js"></script> -->
+<script src="/form/view/js/script.js"> </script>
+<script src="/form/view/js/validation.js"> </script>
+
+<script>
+var gs_fontTag = document.createElement ("font");
+gs_fontTag.setAttribute ("color", "red");
+
+var go_frm = {"id":"formId", "name":"FormName"};
+var ge_form = makeElement ("form", go_frm);
+document.body.appendChild (ge_form);
+
+var gs_labelTag = makeLabel ( "User Name :");//label
+ge_form.appendChild (gs_labelTag);
+
+var go_txt = {"id":"username", "name":"username"};
+var gs_txtInputTag = makeElement ("text", go_txt);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+var gs_labelTag = makeLabel ( "Password :");//label
+ge_form.appendChild (gs_labelTag);
+
+var go_pass = {"id":"password", "name":"password"};
+var gs_pass = makeElement("password",go_pass);
+if (gs_pass==""){
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);	
+}
+ge_form.appendChild (gs_pass);
+
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+var go_btn = {"id":"login", "name":"login", "value":"login", "onclick":"callAjax();"};
+var gs_txtInputTag = makeElement ("button",go_btn);//button 
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+
+var go_btn2 = {"id":"new user", "name":"new user", "value":"new user", "onclick":"location.href ='/form/view/new_user.html';"};
+var gs_txtInputTag = makeElement ("button",go_btn2);//button 
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+document.body.appendChild (gs_txtInputTag);
+
+
+var go_div = {"id":"myDiv", "name":"myDiv"};
+var gs_divTag = makeElement ("div", go_div)
+if (gs_divTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element Formate is not valid"));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+document.body.appendChild (gs_divTag);
+
+
+</script>
+
+</body>
+</html>

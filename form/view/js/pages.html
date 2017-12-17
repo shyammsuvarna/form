@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Main Document </TITLE>
+	 <META NAME="Generator" CONTENT="EditPlus">
+	 <META NAME="Author" CONTENT="Ranganath">
+	 <META NAME="Keywords" CONTENT="">
+	  <META NAME="Description" CONTENT="Generic Functions">
+	  <script src="js/config.js"> </script>
+	  <script src="js/script.js"> </script>
+ </HEAD>
+
+ <BODY>
+	<script>
+		var gs_fontTag = document.createElement ("font");
+		gs_fontTag.setAttribute ("color", "red");
+	
+		var gs_formTag = makeElement ("form", go_frm); // @param type, id, name, value, method, action, encrypt
+		document.body.appendChild (gs_formTag);
+
+		var gs_divTag = makeElement ("div", go_div)
+		if (gs_divTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element Formate is not valid"));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_divTag);
+
+		var gs_labelTag = makeLabel ( "User Name :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("text", go_txt);
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+		
+		var gs_labelTag = makeLabel ( "Password :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("password");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+		var gs_labelTag = makeLabel ( "Button :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("button");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+		var gs_labelTag = makeLabel ( "Submit :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("submit");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+		var gs_labelTag = makeLabel ( "Radio :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("radio");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+
+		var gs_labelTag = makeLabel ( "Hidden Button	:");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("hidden");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+		
+		var gs_labelTag = makeLabel ( "checkbox :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("checkbox");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+		var gs_labelTag = makeLabel ( "Reset :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_txtInputTag = makeElement ("reset");
+		if (gs_txtInputTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_txtInputTag);
+
+		
+		var gs_labelTag = makeLabel ( "Multi Select Box");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_selectTag = makeElement ("select", go_selct); // @param selectTag, id, name, no.of options, multiple
+		if (gs_selectTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_selectTag);
+
+			
+		var gs_labelTag = makeLabel ( "Select Box :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_selectTag = makeElement ("select", go_selct1); // @param selectTag, id, name, no.of options
+		if (gs_selectTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}
+		gs_formTag.appendChild (gs_selectTag);
+
+					
+		var gs_labelTag = makeLabel ( "Table  :");
+		gs_formTag.appendChild (gs_labelTag);
+
+		var gs_tableTag = makeElement ("table", go_tabl); // @param tableTag, id, name, border, width, height
+		if (gs_tableTag == "") {
+			gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+			gs_errTag = gs_fontTag;
+			document.body.appendChild (gs_errTag);
+		}	
+		var gs_thTag = makeSubElement (gs_tableTag, "tr", "th","5"); // @param tableTag, <tr>, colType, No.of head
+		gs_formTag.appendChild (gs_thTag);
+		//gs_tableTag.appendChild (gs_thTag);
+		var gs_trTag = makeSubElement (gs_tableTag, "tr", "td", "3", "5"); // @param tableTag, tr, td, rows, cols,
+		gs_formTag.appendChild (gs_trTag);
+
+		//gs_formTag.appendChild (gs_tableTag);
+
+	</script>
+ </BODY>
+</HTML>

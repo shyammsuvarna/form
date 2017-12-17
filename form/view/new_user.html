@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--  <script src="/form/view/js/myjs.js"></script> -->
+<script src="/form/view/js/script.js"> </script>
+<script src="/form/view/js/validation.js"> </script>
+
+<script>
+var gs_fontTag = document.createElement ("font");
+gs_fontTag.setAttribute ("color", "red");
+
+var go_prop = "";
+go_prop = {"id":"formId", "name":"FormName"};
+var ge_form = makeElement ("form", go_prop);
+document.body.appendChild (ge_form);
+
+
+var gs_labelTag = makeLabel ( "*First Name :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"firstname", "name":"firstname","maxlength":"50","onchange":"checkName('firstname','firstnameid');"};
+var gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "firstnameid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "Last Name :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"lastname", "name":"lastname","maxlength":"50","onchange":"checkLName('lastname','lastnameid');"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "lastnameid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "Address :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"address", "name":"address","maxlength":"100"};
+gs_txtInputTag = makeElement ("textarea", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "addressid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "*select country :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"country", "name":"country","maxlength":"100"};
+gs_txtInputTag = makeElement ("select", go_prop, {"India":"India","Pakisthan":"Pakisthan"});//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "countryid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+
+gs_labelTag = makeLabel ( "state :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"state", "name":"state","maxlength":"50","onchange":"checkLName('state','stateid');"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "stateid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "city :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"city", "name":"city","maxlength":"50","onchange":"checkLName('city','cityid');"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "cityid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "pin :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"pin", "name":"pin","maxlength":"6","onchange":"checkPin('pin','pinid');"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "pinid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "phone :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"phone", "name":"phone","maxlength":"10","onchange":"checkPhone('phone','phoneid');"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "phoneid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+gs_labelTag = makeLabel ( "*Email :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"email", "name":"email","maxlength":"50", "onchange":"checkEmail('email','emailid')"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "emailid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+
+gs_labelTag = makeLabel ( "*User Name :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"username", "name":"username","maxlength":"50", "onchange":"checkUserName('username','usernameid')"};
+gs_txtInputTag = makeElement ("text", go_prop);//textbox
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "usernameid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+
+gs_labelTag = makeLabel ( "*Password :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"password", "name":"password", "maxlength":"50","onchange":"checkPass('password','passwordid')"};
+var gs_pass = makeElement("password",go_prop);
+if (gs_pass==""){
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);	
+}
+ge_form.appendChild (gs_pass);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "passwordid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+
+gs_labelTag = makeLabel ( "*Re-type Password :");//label
+ge_form.appendChild (gs_labelTag);
+go_prop = {"id":"passwordc", "name":"passwordc", "maxlength":"50", "onchange":"checkPass2('password','passwordc','passwordcid')"};
+gs_pass = makeElement("password",go_prop);
+if (gs_pass==""){
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);	
+}
+ge_form.appendChild (gs_pass);
+ls_span = document.createElement("span");//span for error
+ls_span.id = "passwordcid";
+ge_form.appendChild (ls_span);
+ls_br = document.createElement("br");
+ge_form.appendChild(ls_br);
+
+go_prop = {"id":"submit", "name":"submit", "value":"submit", "onclick":"myFunction('firstname','firstnameid','lastname','lastnameid','pin','pinid','phone','phoneid','username','usernameid','email','emailid','password','passwordid','passwordc','passwordcid','city','cityid','state','stateid','country','submit','address')"};
+gs_txtInputTag = makeElement ("button",go_prop);//button 
+if (gs_txtInputTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element " + gs_labelTag.data +" Formate is not valid" ));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+ge_form.appendChild (gs_txtInputTag);
+
+
+go_prop = {"id":"myDivId", "name":"myDivId"};
+var gs_divTag = makeElement ("div", go_prop)
+if (gs_divTag == "") {
+	gs_fontTag.appendChild (document.createTextNode ("# Error: Html Element Formate is not valid"));
+	gs_errTag = gs_fontTag;
+	document.body.appendChild (gs_errTag);
+}
+document.body.appendChild (gs_divTag);
+
+
+</script>
+
+</body>
+</html>
