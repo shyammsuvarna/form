@@ -1,7 +1,9 @@
 <?php
 include 'define.php';
 
-var_dump($_REQUEST);
+// echo "<pre>";
+// var_dump($_REQUEST);
+
 /**
  * function test_input 
  * @param string $fs_data 
